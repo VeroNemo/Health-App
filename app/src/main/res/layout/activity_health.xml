@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    tools:context=".HealthActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="30px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="500px"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30px"
+            android:paddingTop="80px"
+            android:text="Zdravie"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_layout_bottom"
+        android:layout_below="@id/linear_layout_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="20px"
+            android:orientation="vertical"
+            android:layout_above="@+id/linear_layout_bottom"
+            android:layout_below="@id/linear_layout_top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20px"
+                android:background="@drawable/shape_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewWater"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Voda: 0 / 1000ml"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="20px"
+                    android:paddingBottom="20px">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="1"
+                        android:onClick="changeWater"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/glass" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="1"
+                        android:onClick="changeWater"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/glass" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="1"
+                        android:onClick="changeWater"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/glass" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="1"
+                        android:onClick="changeWater"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/glass" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="1"
+                        android:onClick="changeWater"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/glass" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20px"
+                android:background="@drawable/shape_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Váha:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textViewWeight2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/buttonWeight"
+                    android:layout_width="400px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20px"
+                    android:backgroundTint="#411A1A65"
+                    android:onClick="changeWeight"
+                    android:text="Zmeniť váhu"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20px"
+                android:background="@drawable/shape_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Výška:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textViewHeight2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/buttonHeight"
+                    android:layout_width="400px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20px"
+                    android:backgroundTint="#411A1A65"
+                    android:onClick="changeHeight"
+                    android:text="Zmeniť výšku"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_layout"
+                android:orientation="vertical"
+                android:layout_marginBottom="40px">
+
+                <TextView
+                    android:id="@+id/textViewBMI"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="BMI index:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textViewBMI2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Ak chete vedieť svoje BMI, najskôr musíte zadať váhu a výšku"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textViewBMI3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#411A1A65"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="20px"
+        android:paddingBottom="20px">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="30px"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="goToMainH"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/footprints" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="30px"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="goToReportsH"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/chart" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="30px"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="30px"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="goToSettingsH"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/settings" />
+    </LinearLayout>
+
+</RelativeLayout>

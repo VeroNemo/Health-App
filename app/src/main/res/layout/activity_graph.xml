@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    tools:context=".GraphActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="30px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="500px"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30px"
+            android:paddingTop="80px"
+            android:text="Reporty"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_layout_bottom"
+        android:layout_below="@id/linear_layout_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="20px"
+                android:layout_marginRight="20px"
+                android:layout_marginBottom="20px"
+                android:background="@drawable/shape_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewToday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dnes"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart2"
+                    android:layout_width="match_parent"
+                    android:layout_height="900px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:layout_marginBottom="20px"
+                android:background="@drawable/shape_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Celý týždeň"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="900px" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#411A1A65"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="20px"
+        android:paddingBottom="20px">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="30px"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="goToMainG"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/footprints" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="30px"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/chart" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="30px"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="goToHealthG"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="30px"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="goToSettingsG"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/settings" />
+    </LinearLayout>
+
+</RelativeLayout>

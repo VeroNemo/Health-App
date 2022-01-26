@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30px"
+        android:paddingTop="80px"
+        android:text="Dnes"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="600px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100px"
+            android:background="@drawable/shape_circle"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130px"
+                android:text="Cieľ: 10000"
+                android:textAlignment="center"
+                android:textColor="#A4FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewSteps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50px"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50px"
+                android:text="Krokov"
+                android:textAlignment="center"
+                android:textColor="#A4FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonStartSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="150px"
+            android:layout_gravity="center"
+            android:backgroundTint="#411A1A65"
+            android:onClick="startCountingSteps"
+            android:text="Zastav počítanie"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:cornerRadius="30dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100px"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewKmNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewKm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Km"
+                android:textAlignment="center"
+                android:textColor="#A4FFFFFF" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#411A1A65"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="20px"
+        android:paddingBottom="20px">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="30px"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/footprints" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="30px"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="goToReportsM"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/chart" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="30px"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="goToHealthM"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="30px"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="goToSettingsM"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/settings" />
+    </LinearLayout>
+
+</RelativeLayout>
